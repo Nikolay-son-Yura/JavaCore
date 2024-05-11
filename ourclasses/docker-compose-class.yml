@@ -1,8 +1,8 @@
 services:
   app:
   image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
-  command: javac -sourcepath /src -d /out /src/ru/gb/viktorov/Main.java
-  volumes:
+  command: javac -sourcepath /app/src -d /out /app/src/ru/gb/viktorov/Main.java
+volumes:
     - ./bin:/app/out
     - ./src:/app/src
 
